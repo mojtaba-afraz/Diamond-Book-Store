@@ -1,0 +1,14 @@
+@import "../icons/css/all.css";
+
+@font-face {
+  font-family: ubuntu;
+  src: url(../Fonts/Ubuntu-Regular.ttf);
+}
+
+*{
+  font-family:'ubuntu';
+}
+
+.v-dialog{
+  border-radius:20px !important
+}

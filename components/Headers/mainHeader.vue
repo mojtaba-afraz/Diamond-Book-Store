@@ -1,33 +1,54 @@
 <template>
-<v-row class="header" justify="center">
+  <v-container>
+    <v-row>
       <v-col cols="4">
-        <img width="30%" alt="logo" src="@/assets/image/logo.png"/>
+        <img width="30%" src="@/assets/image/logo.png"/>
       </v-col>
-      <v-col cols="8">
-        <ul class="list">
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
+      <v-col cols="4">
+        <ul>
+          <li>Categories</li>
+          <li>Authors</li>
+          <li>About Us</li>
         </ul>
       </v-col>
-</v-row>
+      <v-col class="text-right login-container" cols="4">
+        <login-modal/>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import LoginModal from "~/components/Modals/LoginModal";
 export default {
-name: "mainHeader"
+name: "mainHeader",
+  components:{
+    LoginModal
+  }
 }
 </script>
 
 <style scoped>
-.Header{
-  width: 100%;
-  height: 10px;
-  box-shadow: 0px 22px 28px -12px rgba(0,0,0,0.58);
+ul{
+  height:100%;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
 }
-.list li{
-  display:inline;
+li{
+  list-style-type: none;
+  transition:.1s;
+  cursor:pointer;
 }
+li:hover{
+  color: #62ab00;
+  border-bottom: 1px solid #62ab00;
+}
+.login-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 
 </style>
