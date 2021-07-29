@@ -18,17 +18,18 @@
           </v-icon>
           LogIn
         </v-btn>
-        <v-btn
-          v-if="$cookies.get('accessToken')"
-          dark
-          rounded
-          color="#62ab00"
-        >
-          <v-icon left>
-            fa-solid fa-user
-          </v-icon>
-          Profile
-        </v-btn>
+        <NuxtLink v-if="$cookies.get('accessToken')" to="/profile">
+          <v-btn
+            dark
+            rounded
+            color="#62ab00"
+          >
+            <v-icon left>
+              fa-solid fa-user
+            </v-icon>
+            Profile
+          </v-btn>
+        </NuxtLink>
       </template>
       <v-card>
         <v-card-title style="background-color:#62ab00;color:#fff">
