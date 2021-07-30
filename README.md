@@ -8,8 +8,6 @@
 Diamond book store
 </h1>
 
-****
-
 
 <h2 align="center">
 This website is implemented with Nuxt.js as a side-by-side server and PWS, and fully communicates with API, and Vuetify.js is used in the design.<br/>
