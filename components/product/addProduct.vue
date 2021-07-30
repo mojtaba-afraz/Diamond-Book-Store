@@ -24,7 +24,7 @@
           <v-row style="margin: 20px 0px">
             <v-col cols="12">
              <v-row>
-               <v-col cols="6">
+               <v-col cols="4">
                  <v-text-field
                    label="name"
                    placeholder="Enter Book Name"
@@ -32,7 +32,7 @@
                    v-model="Book.name"
                  ></v-text-field>
                </v-col>
-               <v-col cols="6">
+               <v-col cols="4">
                  <v-text-field
                    label="Author"
                    placeholder="Enter Book Author"
@@ -40,7 +40,7 @@
                    v-model="Book.author"
                  ></v-text-field>
                </v-col>
-               <v-col cols="6">
+               <v-col cols="4">
                  <v-text-field
                    label="Publisher"
                    placeholder="Enter Book Publisher"
@@ -48,7 +48,7 @@
                    v-model="Book.publisher"
                  ></v-text-field>
                </v-col>
-               <v-col cols="6">
+               <v-col cols="4">
                  <v-text-field
                    label="Price"
                    placeholder="Enter Book Price"
@@ -56,7 +56,7 @@
                    v-model="Book.price"
                  ></v-text-field>
                </v-col>
-               <v-col cols="6">
+               <v-col cols="4">
                  <v-text-field
                    label="Year"
                    placeholder="Enter Book Year"
@@ -64,7 +64,7 @@
                    v-model="Book.year"
                  ></v-text-field>
                </v-col>
-               <v-col cols="6">
+               <v-col cols="4">
                  <v-select
                    :items="rate"
                    label="Book Rate"
