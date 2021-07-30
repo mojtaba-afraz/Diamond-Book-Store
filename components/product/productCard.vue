@@ -26,9 +26,7 @@
       </div>
       <v-row justify="center" v-if="GET_LOGIN" class="likes">
           <v-col cols="2">
-            <v-icon size="18" @click="removeBooks(item.id)" color="red">
-              fa-regular fa-trash-xmark
-            </v-icon>
+            <remove-product :item="item" />
           </v-col>
           <v-col cols="2">
             <v-icon size="18" color="yellow">
@@ -42,14 +40,17 @@
 </template>
 
 <script>
-import {mapActions, mapGetters, mapMutations} from 'vuex'
+import removeProduct from "@/components/product/removeProduct";
+import {mapGetters, mapMutations} from 'vuex'
 export default {
   name: "productCard",
+  components:{
+    removeProduct
+  },
   props:{
     item:{default:''}
   },
   methods:{
-    ...mapActions('Products',['removeBooks']),
     ...mapMutations('Products',['SET_PRODUCT']),
     GoToProduct(){
       this.SET_PRODUCT(null)
@@ -168,7 +169,6 @@ export default {
   content: "";
   position: absolute;
   background-color: #8f98a9;
-  background-color: #aaaebc;
   box-shadow: 0 -6px 0 0 #aaaebc, 0 6px 0 0 #aaaebc;
   width: 4px;
   height: 4px;
