@@ -1,4 +1,5 @@
 <template>
+  <v-expand-transition>
   <div class="wrapper">
     <div class="book-card">
       <div class="content-wrapper">
@@ -23,17 +24,35 @@
           <div class="book-sum card-sum">{{item.Description}}</div>
         </div>
       </div>
-      <div class="likes">
-      </div>
+      <v-row justify="center" v-if="GET_LOGIN" class="likes">
+          <v-col cols="2">
+            <v-icon size="18" @click="removeBooks(item.id)" color="red">
+              fa-regular fa-trash-xmark
+            </v-icon>
+          </v-col>
+          <v-col cols="2">
+            <v-icon size="18" color="yellow">
+              fa-regular fa-pen-to-square
+            </v-icon>
+          </v-col>
+      </v-row>
     </div>
   </div>
+  </v-expand-transition>
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
 export default {
   name: "productCard",
   props:{
     item:{default:''}
+  },
+  methods:{
+    ...mapActions('Products',['removeBooks']),
+  },
+  computed:{
+    ...mapGetters('Profile',['GET_LOGIN'])
   }
 }
 </script>
