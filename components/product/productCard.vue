@@ -1,9 +1,9 @@
 <template>
   <v-expand-transition>
-  <div class="wrapper">
+  <div @click="GoToProduct()" class="wrapper">
     <div class="book-card">
       <div class="content-wrapper">
-        <v-img :src="item.image" :lazy-src="item.image" alt="" class="book-card-img"/>
+        <v-img :src="item.image" alt="" class="book-card-img"/>
         <div class="card-content">
           <div class="book-name">{{item.name}}</div>
           <div class="book-by"> By :{{item.author}}</div>
@@ -17,7 +17,7 @@
                 length="5"
                 readonly
                 size="12"
-                value="3"
+                :value="item.rate"
               ></v-rating>
             </fieldset>
           </div>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import {mapActions, mapGetters} from 'vuex'
+import {mapActions, mapGetters, mapMutations} from 'vuex'
 export default {
   name: "productCard",
   props:{
@@ -50,6 +50,11 @@ export default {
   },
   methods:{
     ...mapActions('Products',['removeBooks']),
+    ...mapMutations('Products',['SET_PRODUCT']),
+    GoToProduct(){
+      this.SET_PRODUCT(null)
+      this.$router.push(`/book/${this.item.id}`)
+    }
   },
   computed:{
     ...mapGetters('Profile',['GET_LOGIN'])

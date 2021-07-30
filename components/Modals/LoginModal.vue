@@ -82,7 +82,7 @@ export default {
       if (this.user == this.GET_USER.userName && this.pass == this.GET_USER.Password){
         this.SET_USER_LOGIN(true)
         this.$toast.show("You have logged in successfully", {
-          type: "outline",
+          type: "success",
           position: "bottom-right",
           duration : 2000
         });

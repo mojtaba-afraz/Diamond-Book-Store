@@ -36,7 +36,7 @@
           </v-row>
           <v-col cols="12">
             <v-row justify="center">
-              <v-col v-for="(item,i) in Search" :key="i" sm="6" md="4" xl="3" cols="12">
+              <v-col v-for="(item,i) in Search" :key="i" sm="12" md="6" xl="4" cols="12">
                 <product-card :item="item" />
               </v-col>
             </v-row>
@@ -102,7 +102,6 @@ export default {
     ...mapGetters('Profile',['GET_LOGIN']),
     Search: {
       get: function () {
-        console.log('this.SearchValue',this.SearchValue)
         if (this.SearchValue){
           return this.GET_PRODUCT.filter(item => (item.name) ? item.name.toLowerCase().includes(this.SearchValue.toLowerCase()) : '')
         }
