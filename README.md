@@ -1,6 +1,6 @@
-<p align="center">
+<!-- <p align="center">
   <img  src="https://i.ibb.co/jMjp4jp/logo.png">
-</p>
+</p> -->
 <h1 align="center">
 Diamond book store
 </h1>
@@ -9,6 +9,20 @@ Diamond book store
 <p align="center">
   <img src="https://i.ibb.co/4tRFz76/screencapture-localhost-3000-2021-07-31-00-50-10.png">
 </p>
+
+<h2 align="center">
+This website is implemented with Nuxt.js as a side-by-side server and PWS, and fully communicates with API, and Vuetify.js is used in the design.
+</h2>
+<h2 align="center">
+Is a simple library management
+site that allows the user to add,
+delete and edit books,
+view book information,
+rate books
+</h2>
+
+
+
 
 ## Build Setup
 
