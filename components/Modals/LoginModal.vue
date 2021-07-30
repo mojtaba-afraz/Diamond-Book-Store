@@ -4,9 +4,8 @@
       v-model="dialog"
       width="400"
     >
-      <template v-slot:activator="{ on, attrs }">
+      <template v-if="GET_LOGIN === false" v-slot:activator="{ on, attrs }">
         <v-btn
-          v-if="!$cookies.get('accessToken')"
           dark
           rounded
           v-bind="attrs"
@@ -18,18 +17,6 @@
           </v-icon>
           LogIn
         </v-btn>
-        <NuxtLink v-if="$cookies.get('accessToken')" to="/profile">
-          <v-btn
-            dark
-            rounded
-            color="#62ab00"
-          >
-            <v-icon left>
-              fa-solid fa-user
-            </v-icon>
-            Profile
-          </v-btn>
-        </NuxtLink>
       </template>
       <v-card>
         <v-card-title style="background-color:#62ab00;color:#fff">
@@ -76,7 +63,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters,mapMutations} from 'vuex'
 export default {
   name: "LoginModal",
   data () {
@@ -87,18 +74,21 @@ export default {
     }
   },
   computed:{
-    ...mapGetters('Profile',['GET_USER'])
+    ...mapGetters('Profile',['GET_USER','GET_LOGIN'])
   },
   methods:{
+    ...mapMutations('Profile',['SET_USER_LOGIN']),
     SubmitLogin(){
       if (this.user == this.GET_USER.userName && this.pass == this.GET_USER.Password){
-        this.$cookies.set('accessToken','Bearer')
-        this.dialog = false
+        this.SET_USER_LOGIN(true)
         this.$toast.show("You have logged in successfully", {
           type: "outline",
           position: "bottom-right",
           duration : 2000
         });
+        this.dialog = false
+        this.$cookies.set('accessToken','Bearer')
+
       }
       else{
         this.$toast.show("Wrong username or password", {

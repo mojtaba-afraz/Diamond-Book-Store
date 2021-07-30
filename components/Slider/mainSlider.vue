@@ -21,8 +21,8 @@ export default {
   data(){
     return{
       slides: [
-        'https://cdn.shopify.com/s/files/1/0070/8991/3908/files/slider1-smartbooks1-1920x566_1920x669.jpg?v=1552168725',
-        'https://cdn.shopify.com/s/files/1/0070/8991/3908/files/slider2-smartbooks1-1920x566_1920x669.jpg?v=1552168663',
+        'https://pezhvakdanesh.com/2/18/1593873844_671822c2f63dd5f65d8fd15c9710420b.jpg',
+        'https://s3.amazonaws.com/prod.assets.thebanner/styles/article-large/s3/article/large/TIN-332%20Books%20from_large.jpg?itok=goIsOQs0',
       ],
     }
   }

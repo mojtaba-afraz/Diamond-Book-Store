@@ -12,7 +12,18 @@
         </ul>
       </v-col>
       <v-col class="text-right login-container" cols="4">
-        <login-modal/>
+        <login-modal v-if="!GET_LOGIN"/>
+          <v-btn
+            v-if="GET_LOGIN"
+            dark
+            rounded
+            color="#62ab00"
+          >
+            <v-icon left>
+              fa-solid fa-user
+            </v-icon>
+            Hi Admin
+          </v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -20,10 +31,14 @@
 
 <script>
 import LoginModal from "~/components/Modals/LoginModal";
+import {mapGetters} from "vuex";
 export default {
 name: "mainHeader",
   components:{
     LoginModal
+  },
+  computed:{
+    ...mapGetters('Profile',['GET_LOGIN'])
   }
 }
 </script>
