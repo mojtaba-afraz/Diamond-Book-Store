@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="4">
-        <img @click="()=> this.$router.push('/')" class="cursor-pointer" width="30%" src="@/assets/image/logo.png"/>
+        <img @click="()=> this.$router.push('/')" class="cursor-pointer" width="30%" src="@/static/image/logo.png"/>
       </v-col>
       <v-col cols="4">
         <ul>
