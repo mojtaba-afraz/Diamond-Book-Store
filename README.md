@@ -42,3 +42,11 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+
+
+## How do I add, delete or edit a book !?
+
+- Please login first
+- Once you have successfully logged in, the Add, Delete and Edit buttons will be displayed for you
+- When done, you can log out
