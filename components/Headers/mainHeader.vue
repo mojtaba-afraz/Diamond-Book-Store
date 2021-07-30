@@ -1,17 +1,17 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="4">
-        <img @click="()=> this.$router.push('/')" class="cursor-pointer" width="30%" src="~/assets/image/logo.png"/>
+      <v-col md="4" sm="3" cols="6">
+        <img @click="()=> this.$router.push('/')" class="cursor-pointer" width="150vh" src="~/assets/image/logo.png"/>
       </v-col>
-      <v-col cols="4">
+      <v-col md="4" class="d-none d-sm-block d-md-block" sm="6" cols="6">
         <ul>
           <li>Categories</li>
           <li>Authors</li>
           <li>About Us</li>
         </ul>
       </v-col>
-      <v-col class="text-right login-container" cols="4">
+      <v-col class="text-right login-container" md="4" sm="3" cols="6">
         <login-modal v-if="!GET_LOGIN"/>
         <v-menu
           v-if="GET_LOGIN"
@@ -110,6 +110,7 @@ li:hover{
   align-items: center;
 }
 .cursor-pointer{
+  margin: 0 auto;
   cursor: pointer;
 }
 
