@@ -28,6 +28,17 @@ export const mutations = {
   REMOVE_BOOK(state,data){
     state.products = state.products.filter(item => item.id !== data)
   },
+  EDIT_BOOK(state,data){
+    let index = state.products.findIndex(item => item.id === data.id)
+    state.products[index].name = data.name
+    state.products[index].Description = data.Description
+    state.products[index].author = data.author
+    state.products[index].image = data.image
+    state.products[index].price = data.price
+    state.products[index].publisher = data.publisher
+    state.products[index].rate = data.rate
+    state.products[index].year = data.year
+  },
 }
 
 export const actions = {
@@ -56,6 +67,18 @@ export const actions = {
     if (books){
       commit("REMOVE_BOOK", data);
       this.$toast.show("The book was successfully deleted", {
+        type: "success",
+        position: "bottom-right",
+        duration : 2000
+      });
+      return true
+    }
+  },
+  async editBook({commit, state },data) {
+    const book = await this.$axios.put(`${BaseURL}/${data.id}`,data)
+    if (book){
+      commit("EDIT_BOOK", data);
+      this.$toast.show("The book was successfully Edited", {
         type: "success",
         position: "bottom-right",
         duration : 2000

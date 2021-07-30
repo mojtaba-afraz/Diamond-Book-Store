@@ -25,13 +25,11 @@
         </div>
       </div>
       <v-row justify="center" v-if="GET_LOGIN" class="likes">
-          <v-col cols="2">
+          <v-col class="text-center" cols="1">
             <remove-product :item="item" />
           </v-col>
-          <v-col cols="2">
-            <v-icon size="18" color="yellow">
-              fa-regular fa-pen-to-square
-            </v-icon>
+          <v-col cols="1">
+            <edit-product :item="item"/>
           </v-col>
       </v-row>
     </div>
@@ -41,11 +39,13 @@
 
 <script>
 import removeProduct from "@/components/product/removeProduct";
+import editProduct from "@/components/product/editProduct";
 import {mapGetters, mapMutations} from 'vuex'
 export default {
   name: "productCard",
   components:{
-    removeProduct
+    removeProduct,
+    editProduct
   },
   props:{
     item:{default:''}
