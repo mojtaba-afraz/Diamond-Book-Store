@@ -1,4 +1,9 @@
-# diamond-bookShop
+<img style="margin: 0 auto;display: block" src="https://i.ibb.co/jMjp4jp/logo.png"/>
+<h1 style="text-align: center;font-family: Lato;color: #9ef132">Diamond book Shop</h1>
+
+****
+<img style="margin: 0 auto;display: block" src="https://i.ibb.co/4tRFz76/screencapture-localhost-3000-2021-07-31-00-50-10.png"/>
+
 
 ## Build Setup
 
