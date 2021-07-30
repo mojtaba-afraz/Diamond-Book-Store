@@ -17,7 +17,7 @@
           </v-col>
           <v-col cols="12">
             <v-row justify="center">
-              <v-col v-for="(item,i) in GET_PRODUCT" :key="i" sm="6" md="3" xl="3" cols="12">
+              <v-col v-for="(item,i) in GET_PRODUCT" :key="i" sm="6" md="4" xl="3" cols="12">
                 <product-card :item="item" />
               </v-col>
             </v-row>
@@ -30,6 +30,7 @@
         </v-col>
       </v-row>
     </v-col>
+    <add-product v-if="GET_LOGIN" />
   </v-row>
 </template>
 
@@ -37,12 +38,14 @@
 import mainSlider from "~/components/Slider/mainSlider";
 import CardItem from "~/components/Items/CardItem";
 import productCard from "~/components/product/productCard";
+import addProduct from "~/components/product/addProduct";
 import {mapActions,mapGetters} from 'vuex'
 export default {
   components:{
     mainSlider,
     CardItem,
-    productCard
+    productCard,
+    addProduct
   },
   data () {
     return {
@@ -74,7 +77,8 @@ export default {
     ...mapActions('Products',['GetBooks']),
   },
   computed:{
-    ...mapGetters('Products',['GET_PRODUCT'])
+    ...mapGetters('Products',['GET_PRODUCT']),
+    ...mapGetters('Profile',['GET_LOGIN'])
   },
   mounted(){
     this.GetBooks()
