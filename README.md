@@ -1,14 +1,15 @@
 <!-- <p align="center">
   <img  src="https://i.ibb.co/jMjp4jp/logo.png">
 </p> -->
+<p align="center">
+  <img src="https://i.ibb.co/4tRFz76/screencapture-localhost-3000-2021-07-31-00-50-10.png">
+</p>
 <h1 align="center">
 Diamond book store
 </h1>
 
 ****
-<p align="center">
-  <img src="https://i.ibb.co/4tRFz76/screencapture-localhost-3000-2021-07-31-00-50-10.png">
-</p>
+
 
 <h2 align="center">
 This website is implemented with Nuxt.js as a side-by-side server and PWS, and fully communicates with API, and Vuetify.js is used in the design.
