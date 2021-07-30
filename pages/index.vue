@@ -10,10 +10,10 @@
             <card-item :text="item.text" :des="item.des" :icon="item.icon"/>
           </v-col>
           <v-col md="6" cols="12">
-            <img alt="book" width="100%" src="@/static/image/shop-book.jpg">
+            <img alt="book" width="100%" src="~/assets/image/shop-book.jpg">
           </v-col>
           <v-col md="6" cols="12">
-            <img alt="book" width="100%" src="@/static/image/offer.jpg">
+            <img alt="book" width="100%" src="~/assets/image/offer.jpg">
           </v-col>
           <v-row>
             <v-col  class="SubHeader" cols="12">
