@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .item{
   margin: 0 10px;
-  border:1px solid #eee
+  border:1px solid #ececec
 }
 h4{
   margin:0 auto;

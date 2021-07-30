@@ -1,6 +1,6 @@
 <template>
-  <v-expand-transition>
-  <div @click="GoToProduct()" class="wrapper">
+  <div>
+  <div @click="GoToProduct()" class="wrapper d-none d-sm-flex">
     <div class="book-card">
       <div class="content-wrapper">
         <v-img :src="item.image" alt="" class="book-card-img"/>
@@ -34,7 +34,46 @@
       </v-row>
     </div>
   </div>
-  </v-expand-transition>
+    <v-card
+      @click="GoToProduct()"
+      class="d-flex d-sm-none"
+      color="white"
+    >
+      <div class="d-flex flex-no-wrap justify-space-between">
+        <div>
+          <v-card-title
+            class="text-h5"
+            v-text="item.name"
+          ></v-card-title>
+          <v-card-subtitle v-text="item.author"></v-card-subtitle>
+          <fieldset class="rating book-rate">
+            <v-rating
+              background-color="warning lighten-1"
+              color="warning"
+              empty-icon="fa-regular fa-star"
+              full-icon="fa-solid fa-star"
+              length="5"
+              readonly
+              size="12"
+              :value="item.rate"
+            ></v-rating>
+          </fieldset>
+          <v-card-actions>
+            <div class="book-sum card-sum">{{item.Description}}</div>
+
+          </v-card-actions>
+        </div>
+
+        <v-avatar
+          class="ma-3"
+          size="125"
+          tile
+        >
+          <v-img :src="item.image"></v-img>
+        </v-avatar>
+      </div>
+    </v-card>
+  </div>
 </template>
 
 <script>

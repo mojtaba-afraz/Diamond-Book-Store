@@ -6,7 +6,7 @@
     <v-col cols="12">
       <v-container>
         <v-row>
-          <v-col v-for="(item,i) in items" :key="i" md="3" cols="12">
+          <v-col v-for="(item,i) in items" :key="i" md="6" cl="3" sm="6" cols="12">
             <card-item :text="item.text" :des="item.des" :icon="item.icon"/>
           </v-col>
           <v-col md="6" cols="12">
@@ -18,10 +18,13 @@
           <v-row>
             <v-col  class="SubHeader" cols="12">
               <v-row>
-                <v-col cols="8">
+                <v-col md="8" class="d-none d-md-flex" cols="12">
                   <h2>Books</h2>
                 </v-col>
-                <v-col cols="4">
+                <v-col md="8" class="d-flex d-md-none" cols="12">
+                  <h2 style="width: 100%" class="text-center">Books</h2>
+                </v-col>
+                <v-col md="4" cols="12">
                   <v-text-field
                     color="#62ab00"
                     outlined
