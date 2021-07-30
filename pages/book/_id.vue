@@ -65,7 +65,7 @@
             <h2> <v-icon color="black">fa-regular fa-books</v-icon> You may also like</h2>
           </div>
           <v-row>
-            <v-col v-if="randomKey && GET_PRODUCT" v-for="item in randomKey" sm="12" md="4" xl="4" cols="12">
+            <v-col v-if="randomKey && GET_PRODUCT" v-for="item in randomKey" :key="item" sm="12" md="4" xl="4" cols="12">
               <product-card :item="GET_PRODUCT[item]"/>
             </v-col>
           </v-row>
