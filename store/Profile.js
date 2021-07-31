@@ -26,9 +26,5 @@ export const mutations = {
 }
 
 export const actions = {
-  async GetBooks({commit, state }) {
-    const books = await this.$axios.get(`${BaseURL}`)
-    commit("SET_PRODUCTS", books.data);
-  },
 
 }

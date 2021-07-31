@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 const BaseURL = 'https://6102a09f79ed680017482214.mockapi.io/api/v1/Books'
 export const state = () => ({
   products:null,
