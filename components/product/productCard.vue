@@ -106,10 +106,10 @@ export default {
 .wrapper {
   transition: .1s;
 }
-.wrapper:hover{
+.book-card:hover{
   outline: 3px solid #62ab00;
 }
-.wrapper:hover .book-card-img{
+.book-card:hover .book-card-img{
   transform: scale(1.04);
 }
 .rating {
@@ -133,6 +133,7 @@ export default {
 }
 
 .book-card {
+  transition:.1s;
   margin-top: 20px;
   background-color: #fff;
   height: 270px;
