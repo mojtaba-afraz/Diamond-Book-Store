@@ -92,7 +92,7 @@
           block
           dark
         >
-          yes,I'm sure !
+          Change !
         </v-btn>
       </v-card-actions>
     </v-card>
