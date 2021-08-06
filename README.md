@@ -9,7 +9,7 @@ Diamond book store
 </h1>
 
 
-<h2 align="center">
+<h4 align="center">
 This website is implemented with Nuxt.js as a server-side and PWA, and fully communicates with API, and Vuetify.js is used in the design.<br/>
   Is a simple library management
 site that allows the user to add,
